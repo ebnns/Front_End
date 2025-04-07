@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* height: 90px; */
+            background-color: #ccc;
+            margin: 0 auto;
+            width: 90%;
+           
+        }
+
+        .border-b {
+            border-bottom: 2px solid black;
+        }
+        .header .logo {
+            margin-left: 5%;
+            
+        }
+        .header .content {
+            margin-right: 5%;
+        }
+        .header .content ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+        }
+        .header .content ul li {
+           position: relative;
+           padding: 30px 10px;
+           
+        }
+
+        
+        .header a {
+            text-decoration: none;
+            color: rgb(0, 170, 255);
+        }
+
+        .header ul li:nth-child(1) a:after
+        , .header ul li:nth-child(2) a:after
+        , .header ul li:nth-child(3) a:after
+        , .header ul li:nth-child(4) a:after
+        , .header ul li:nth-child(5) a:after
+        ,.header ul li:nth-child(6) a:after
+        {
+            content: "";
+            width: 130%;
+            height: 3px;
+            
+            position: absolute;
+            bottom: -5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: aqua;
+            transition: 0.3s;
+        }
+        .header ul li:nth-child(2) a:after
+        , .header ul li:nth-child(3) a:after
+        , .header ul li:nth-child(4) a:after
+        , .header ul li:nth-child(5) a:after
+        , .header ul li:nth-child(6) a:after
+        {
+            opacity: 0;
+
+        }
+        
+        .header ul li:nth-child(2):hover a:after
+        , .header ul li:nth-child(3):hover a:after
+        , .header ul li:nth-child(4):hover a:after
+        , .header ul li:nth-child(5):hover a:after
+        , .header ul li:nth-child(6):hover a:after
+        {
+            opacity: 1;
+        }
+        .header ul li:nth-child(1):hover a
+        , .header ul li:nth-child(2):hover a
+        , .header ul li:nth-child(3):hover a
+        , .header ul li:nth-child(4):hover a
+        , .header ul li:nth-child(5):hover a
+        ,.header ul li:nth-child(6):hover a
+        {
+            color: rgb(0, 115, 255);
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="header border-b">
+
+        <div class="logo ">
+            <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/logo.png" alt="" srcset="">
+        </div>
+
+        <div class="content ">
+            <ul>
+                <li><a href="">Home</a> </li>
+                <li><a href="">Service</a> </li>
+                <li><a href="">Portifolio</a> </li>
+                <li><a href="">About</a> </li>
+                <li><a href="">Pricing</a> </li>
+                <li><a href="">Contact</a> </li>
+            </ul>
+        </div>
+
+       
+    </div>
+
+</body>
+</html>
