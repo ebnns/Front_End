@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      font-family: "Nirmala UI", sans-serif;
+    }
+    .hovercard
+    {
+      display: flex;
+      align-items: center;
+      /*justify-content: center;*/
+      flex-wrap: wrap;
+
+      /*margin: 100px auto;*/
+    }
+    .hovercard .parent
+    {
+      position: relative;
+
+      overflow: hidden;
+
+      width: calc(50% - 4px);
+     
+      margin: 0 2px;
+
+    }
+    @media screen and (max-width:720px) {
+      .hovercard .parent
+    {
+     width: 100%;
+
+    }
+    }
+    .hovercard .parent img{
+
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+
+    }
+
+    .hovercard .parent .content
+    {
+      position: absolute;
+      bottom: -50%;
+      left: 0;
+
+      padding: 15px;
+      background-color: #eee;
+      width: 100%;
+
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    .hovercard .parent .content p
+    {
+     color: #000;
+      font-size: 18px;
+      padding: 8px 0;
+    }
+    .hovercard .parent .content p:nth-child(2){
+      color: #30938f;
+    }
+  .hovercard .parent:hover img
+  {
+    transform: rotate(5deg) scale(1.2);
+  }
+    .hovercard .parent:hover .content
+    {
+      bottom: 0%;
+
+      visibility: visible;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div class="hovercard">                                   <!-- ******  -->
+
+
+
+
+
+
+
+
+
+
+    <div class="parent">
+      <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/shuffle-04.jpg" alt="" >
+
+      <div class="content">
+        <p>Sample Text</p>
+        <p>Photography</p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="parent">
+      <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/shuffle-04.jpg" alt="" >
+
+      <div class="content">
+        <p>Sample Text</p>
+        <p>Photography</p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="parent">
+      <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/shuffle-04.jpg" alt="" >
+
+      <div class="content">
+        <p>Sample Text</p>
+        <p>Photography</p>
+      </div>
+    </div>
+
+
+    <div class="parent">
+      <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/shuffle-04.jpg" alt="" >
+
+      <div class="content">
+        <p>Sample Text</p>
+        <p>Photography</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  </div>                                          <!-- ******  -->
+
+
+
+</body>
+</html>
