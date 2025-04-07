@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+
+            background-color: #c5c1c1;
+        }
+        section{
+
+            margin: 150px auto;
+            width: 260px;
+            height: 260px;
+            background-color: #eee;
+            /* border: 4px solid red; */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+        div{
+           
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+           
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main::after{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            /* background-color: black; */
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            transform: translate(-50%,-50%);
+            /* transition: 0.188s; */
+            background-color: #ecececa1; 
+            
+        }
+        .main:hover::after{
+            animation: ma 0.3s;
+   
+
+        }
+        @keyframes ma {
+            0%,40%{
+                opacity: 1;
+
+            }
+           
+            100%{
+                opacity: 0;
+                width: 200%;
+                height: 200%;
+
+            }
+            
+        }
+        img {
+            transition: 0.3s;
+        }
+        .main:hover img{
+           transform: rotate(5deg) scale(1.1);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <img src="https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/gallery-04.png" alt="" width="250">
+        </div>
+    </section>
+    
+
+
+</body>
+</html>
