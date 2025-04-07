@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+           
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        .header{ 
+            background-color: #c9c4c4;
+        }
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    
+}
+
+
+.header .logo img{
+    width: 100px;
+    margin-left: 50px;
+
+}
+
+.header .list {
+    position: relative;
+
+}
+
+.header  .list .span {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-end;
+    margin-right: 50px;
+    cursor: pointer;
+    
+
+}
+
+.header  .list .span span {
+    display: inline-block;
+    width: 30px;
+    height: 2.2px;
+    background-color: black;
+    transition: all 0.2s;
+    
+}
+
+.header  .list span:nth-child(2) 
+{ 
+width: 20px;
+}
+
+.header .list ul 
+{ 
+list-style-type: none; opacity: 0; visibility: hidden;
+
+position: absolute; top: 15px; right: 50px;
+
+background-color: #9f9898;
+padding: 10px; 
+transition: 0.2s;
+
+}
+
+.header .list ul li { margin: 10px 20px;}
+
+.header .list ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.header  .list .span:hover .ss {
+    width: 30px;
+}
+
+.header .list .span:hover + ul  {
+   
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+
+.header .list  ul:hover 
+{
+
+    opacity: 1;
+    visibility: visible;
+    
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+
+        <div class="list">
+
+            <div class="span">
+                <span></span>
+                <span class="ss"></span>
+                <span></span>
+            </div>
+
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+
+
+    </div>
+
+    <div class="sec1"></div>
+
+    <div class="sec2"></div>
+
+    <div class="sec3"></div>
+
+    <div class="sec4"></div>
+
+    <div class="sec5"></div>
+
+    <div class="sec6"></div>
+
+    <div class="sec7"></div>
+
+
+
+
+</body>
+</html>
