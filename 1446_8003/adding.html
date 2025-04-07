@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            outline: none;
+            border: 1.5px solid;
+            margin: 5px 0;
+        }
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            
+        }
+        
+        table{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        table td{
+            padding: 20px;
+        }
+        .st{
+            border: 1px solid red;
+            background-color: brown;
+            color: white;
+            font-size: 10px;
+            width: 20%;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            left: 300px;
+        }
+        /* }privacy@udemy.com */
+    </style>
+</head>
+<body>
+
+    <div>
+        <h4 id="at">
+
+        </h4>
+        <h1>Add Student</h1>
+
+        <label for="myName">Name</label><br>
+        <input type="text" id="myName">
+    
+        <br>
+    
+        <label for="myDob">DOB</label><br>
+        <input type="text" id="myDob">
+    
+        <br>
+    
+        <label for="myNum">Number</label><br>
+        <input type="text" id="myNum">
+    
+        <br>
+    
+        <input type="submit" value="Submit" id="mySubmit" onclick="addNewItem()">
+    
+
+    </div>
+   
+    
+        <table border="1" id="table">
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>Ahmed</td>
+                <td>2-5-1999</td>
+                <td>1</td>
+            </tr>
+            
+        </table>
+
+    
+    <script >
+const NameInput = document.getElementById("myName")
+
+const DobInput = document.getElementById("myDob")
+
+const NumInput = document.getElementById("myNum")
+
+const SubInput = document.getElementById("mySubmit")
+
+const Attention = document.getElementById("at")
+const table = document.getElementById("table");
+
+function addNewItem() 
+{
+    let myCon ;
+    myCon = NameInput.value.trim().length > 3 && DobInput.value.trim() && NumInput.value.trim().length>5 
+
+    if (myCon)
+    {
+        console.log("YES");
+        table.innerHTML +=
+         `<tr>
+            <td>${NameInput.value}</td>
+            <td>${DobInput.value}</td>
+            <td>${NumInput.value}</td>
+            <td>X</td>
+        </tr> `
+        
+
+        NameInput.value = ""
+        DobInput.value = ""
+        NumInput.value = ""
+
+    } else {
+        console.log("NO");
+        Attention.innerHTML = "<p class=st > خطا______ ⚠ </p>"
+
+        setTimeout(function(){
+            Attention.innerHTML = ""
+        },2400)
+
+    }
+
+
+}
+
+
+
+  </script>
+</body>
+</html>
