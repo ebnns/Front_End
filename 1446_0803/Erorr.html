@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+    <style>
+        .st{
+            border: 1px solid red;
+            background-color: brown;
+            color: white;
+            font-size: 10px;
+            width: 20%;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 300px;
+        }</style>
+</head>
+<body>
+
+    <h4 id="at">
+
+    </h4>
+
+        
+    <p>Enter thing</p>
+    <input type="text" id="mytext">
+    <br>
+    <input type="submit" id="mysub" onclick="DOTHIS()">
+    
+  
+    <script >
+
+      const MYTEXT = document.getElementById("mytext");
+const Attention = document.getElementById("at")
+
+function DOTHIS() {
+  
+
+    if ( /*MYTEXT.value.trim()  != '' &&*/ MYTEXT.value.trim().length > 6)
+    {
+    
+        console.log("YES")
+
+        MYTEXT.value = ""
+
+    } else {
+        console.log("NO");
+        Attention.innerHTML = "<p class=st > Error ⚠ </p>"
+
+        setTimeout(function(){
+            Attention.innerHTML = ""
+        },2000)
+
+    }
+
+
+}
+    </script>
+</body>
+</html>
